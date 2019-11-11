@@ -1006,8 +1006,6 @@ bool obsffmpeg::encoder::update(obs_data_t* settings)
 							char sterror[AV_ERROR_MAX_STRING_SIZE];
 							av_make_error_string(sterror, AV_ERROR_MAX_STRING_SIZE, ret);
 							PLOG_WARNING("Option '%s' could not be set to '%s'. (%s)", key.c_str(), value.c_str(), sterror);
-						} else {
-							PLOG_WARNING("Option '%s' set to '%s'.", key.c_str(), value.c_str());
 						}
 						have_param      = false;
 						have_key        = false;
